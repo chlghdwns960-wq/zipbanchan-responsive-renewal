@@ -1,0 +1,2025 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>시안 구현</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="헤더 영역">
+      <div class="header-box-group" aria-label="헤더 자식 박스 영역">
+        <div class="header-box header-box--search" aria-label="search 박스">
+          <div class="search-box">
+            <input
+              type="text"
+              placeholder="반찬을 입력해주세요."
+              aria-label="검색어 입력"
+            />
+            <button class="search-button" type="button" aria-label="검색">
+              <img src="./images/logo/icon4.png" alt="검색" />
+            </button>
+          </div>
+        </div>
+        <div class="header-box header-box--logo" aria-label="logo 박스">
+          <a
+            href="#"
+            class="header-link logo-box"
+            aria-label="집반찬연구소 로고"
+          >
+            <img src="./images/logo/logo1.png" alt="집반찬연구소" />
+          </a>
+        </div>
+        <div class="header-box header-box--right" aria-label="right 박스">
+          <div class="utility-box">
+            <div class="utility-top">
+              <span class="utility-item">로그인</span>
+              <span class="utility-item">회원가입</span>
+              <span class="utility-item">내정보</span>
+            </div>
+            <div class="utility-bottom">
+              <span class="utility-icon-item"
+                ><img
+                  src="./images/logo/icon4.svg"
+                  alt=""
+                  aria-hidden="true"
+                />전화주문</span
+              >
+              <span class="utility-icon-item"
+                ><img
+                  src="./images/logo/icon5.svg"
+                  alt=""
+                  aria-hidden="true"
+                />브랜드</span
+              >
+              <span class="utility-icon-item"
+                ><img
+                  src="./images/logo/icon6.svg"
+                  alt=""
+                  aria-hidden="true"
+                />반찬보기</span
+              >
+              <span class="utility-icon-item"
+                ><img
+                  src="./images/logo/icon7.svg"
+                  alt=""
+                  aria-hidden="true"
+                />장바구니</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- 배너 슬라이드 -->
+    <!-- <div class="banner" aria-label="슬라이드 영역">
+      <img src="./images/00_banner/banner.jpg" alt="" />
+    </div> -->
+    <section class="main-visual">
+      <div class="swiper mainVisualSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="./images/00_banner/banner.jpg" alt="슬라이드 1" />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="./images/00_banner/banner01.jpg" alt="슬라이드 2" />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="./images/00_banner/banner02.jpg" alt="슬라이드 3" />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="./images/00_banner/banner03.png" alt="슬라이드 4" />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="./images/00_banner/banner04.jpg" alt="슬라이드 5" />
+            </a>
+          </div>
+        </div>
+
+        <!-- 이전/다음 버튼 -->
+        <div class="mv-nav">
+          <button type="button" class="mv-btn mv-prev" aria-label="이전">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M14.5 5.5L8 12l6.5 6.5" />
+            </svg>
+          </button>
+
+          <button type="button" class="mv-btn mv-next" aria-label="다음">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M9.5 5.5L16 12l-6.5 6.5" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- 페이지 표시 -->
+        <div class="mv-fraction">
+          <span class="current">1</span>
+          <span class="slash">/</span>
+          <span class="total">5</span>
+        </div>
+      </div>
+    </section>
+
+    <main class="main-content" aria-label="메인 영역">
+      <div class="main-stack" aria-label="메인 자식 박스 영역">
+        <article class="content-box content-box--box1" aria-label="자식 박스 1">
+          <div class="box1-inner">
+            <div class="box1-title-wrap" aria-label="박스 1 제목 영역">
+              <h2 class="box1-title">부담없는 알뜰 반찬</h2>
+              <p class="box1-subtitle">착한 가격으로 챙기는 든든 한 끼</p>
+            </div>
+
+            <div class="card-grid" aria-label="상품 카드 목록">
+              <a href="./sub1.html"
+                ><article class="food-card" aria-label="상품 카드 1">
+                  <div class="food-card-thumb">
+                    <img src="./images/img1.jpg" alt="파스타 이미지" />
+                  </div>
+                  <div class="food-card-body">
+                    <div class="food-card-badges">
+                      <span class="food-card-badge food-card-badge--new"
+                        >신제품</span
+                      >
+                    </div>
+                    <h3 class="food-card-title">쭈구미 풋마늘 파스타</h3>
+                    <p class="food-card-desc">
+                      봄기운 가득! 쭈꾸미와 풋마늘의 찰떡 궁합
+                    </p>
+                    <div class="food-card-price-row">
+                      <span class="food-card-sale">7%</span>
+                      <strong class="food-card-price">12,800원</strong>
+                    </div>
+                    <p class="food-card-origin">13,800원</p>
+                  </div>
+                </article></a
+              >
+
+              <article class="food-card" aria-label="상품 카드 2">
+                <div class="food-card-thumb">
+                  <img src="./images/img2.jpg" alt="크림 파스타 이미지" />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--new"
+                      >신제품</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">쭈구미 미나리 파스타</h3>
+                  <p class="food-card-desc">
+                    지금이 제철! 쭈꾸미와 미나리의 만남
+                  </p>
+                  <div class="food-card-price-row">
+                    <span class="food-card-sale">7%</span>
+                    <strong class="food-card-price">12,800원</strong>
+                  </div>
+                  <p class="food-card-origin">13,800원</p>
+                </div>
+              </article>
+
+              <article class="food-card" aria-label="상품 카드 3">
+                <div class="food-card-thumb">
+                  <img src="./images/img3.jpg" alt="면 요리 이미지" />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--popular"
+                      >인기</span
+                    >
+                    <span class="food-card-badge food-card-badge--mild"
+                      >맵지 않음</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">잡채</h3>
+                  <p class="food-card-desc">탱글한 면발과 맛깔진 고명이 가득</p>
+                  <div class="food-card-price-row">
+                    <span class="food-card-sale">7%</span>
+                    <strong class="food-card-price">12,800원</strong>
+                  </div>
+                </div>
+              </article>
+
+              <article class="food-card" aria-label="상품 카드 4">
+                <div class="food-card-thumb">
+                  <img src="./images/img4.jpg" alt="볶음 요리 이미지" />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--mild"
+                      >맵지 않음</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">한끼 한돈제육_완조리</h3>
+                  <p class="food-card-desc">
+                    혼자 먹기 딱 좋은. 1인분 제육 볶음
+                  </p>
+                  <div class="food-card-price-row">
+                    <span class="food-card-sale">6%</span>
+                    <strong class="food-card-price">8,000원</strong>
+                  </div>
+                </div>
+              </article>
+
+              <article class="food-card" aria-label="상품 카드 5">
+                <div class="food-card-thumb">
+                  <img src="./images/img5.jpg" alt="덮밥 이미지" />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--popular"
+                      >인기</span
+                    >
+                    <span class="food-card-badge food-card-badge--mild"
+                      >맵지 않음</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">[원더스푼]두부덮밥</h3>
+                  <p class="food-card-desc">
+                    아이들도 입맛 없는 날 뚝딱 한 그릇
+                  </p>
+                  <div class="food-card-price-row">
+                    <span class="food-card-sale">7%</span>
+                    <strong class="food-card-price">3,500원</strong>
+                  </div>
+                </div>
+              </article>
+
+              <article class="food-card" aria-label="상품 카드 6">
+                <div class="food-card-thumb">
+                  <img src="./images/img6.jpg" alt="야채 덮밥 이미지" />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--new"
+                      >신제품</span
+                    >
+                    <span class="food-card-badge food-card-badge--mild"
+                      >맵지 않음</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">[원더스푼]한돈 순두부 덮밥</h3>
+                  <p class="food-card-desc">
+                    몽글몽글 부드러운 한돈 순두부 소스
+                  </p>
+                  <div class="food-card-price-row">
+                    <span class="food-card-sale">7%</span>
+                    <strong class="food-card-price">3,800원</strong>
+                  </div>
+                </div>
+              </article>
+
+              <article class="food-card" aria-label="상품 카드 7">
+                <div class="food-card-thumb">
+                  <img src="./images/img7.jpg" alt="카레 덮밥 이미지" />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--new"
+                      >신제품</span
+                    >
+                    <span class="food-card-badge food-card-badge--mild"
+                      >맵지 않음</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">
+                    [원더스푼] 한우 하이라이스 덮밥
+                  </h3>
+                  <p class="food-card-desc">
+                    부드럽게 끓여낸 한우 하이라이스 소스
+                  </p>
+                  <div class="food-card-price-row">
+                    <span class="food-card-sale">7%</span>
+                    <strong class="food-card-price">4,300원</strong>
+                  </div>
+                </div>
+              </article>
+
+              <article class="food-card" aria-label="상품 카드 8">
+                <div class="food-card-thumb">
+                  <img src="./images/img8.jpg" alt="옥수수 덮밥 이미지" />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--new"
+                      >신제품</span
+                    >
+                    <span class="food-card-badge food-card-badge--mild"
+                      >맵지 않음</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">
+                    [원더스푼] 한우 삼색 소보로 덮밥
+                  </h3>
+                  <p class="food-card-desc">
+                    알록달록 색감까지 맛있는 삼색 덮밥
+                  </p>
+                  <div class="food-card-price-row">
+                    <span class="food-card-sale">7%</span>
+                    <strong class="food-card-price">4,800원</strong>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </article>
+
+        <article class="content-box content-box--box2" aria-label="자식 박스 2">
+          <div class="box2-inner">
+            <div class="box2-title-wrap" aria-label="박스 2 제목 영역">
+              <h2 class="box2-title">집밥 한 끼</h2>
+              <p class="box2-subtitle">치솟는 물가엔 현명한 소비</p>
+            </div>
+
+            <div class="meal-slider-wrap">
+              <button
+                type="button"
+                class="meal-btn meal-prev"
+                aria-label="이전"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M14.5 5.5L8 12l6.5 6.5" />
+                </svg>
+              </button>
+
+              <div class="swiper mealSwiper">
+                <div class="swiper-wrapper">
+                  <!-- 1 -->
+                  <div class="swiper-slide">
+                    <article class="meal-card" aria-label="집밥 카드 1">
+                      <span class="meal-card-sale-badge"
+                        ><img src="./images/logo/icon1.png" alt="11% 할인"
+                      /></span>
+                      <div class="meal-card-thumb">
+                        <img
+                          src="./images/02_bancham/img1.jpg"
+                          alt="메추리알 간장조림"
+                        />
+                        <span class="meal-card-lock" aria-hidden="true"
+                          ><img src="./images/logo/icon3.png" alt=""
+                        /></span>
+                      </div>
+                      <div class="meal-card-body">
+                        <div class="meal-card-badges"></div>
+                        <h3 class="meal-card-title">메추리알 간장조림</h3>
+                        <div class="meal-card-price-row">
+                          <span class="meal-card-sale">11%</span>
+                          <strong class="meal-card-price">3,400원</strong>
+                        </div>
+                        <p class="meal-card-origin">4,300원</p>
+                      </div>
+                    </article>
+                  </div>
+
+                  <!-- 2 -->
+                  <div class="swiper-slide">
+                    <article class="meal-card" aria-label="집밥 카드 2">
+                      <span class="meal-card-sale-badge"
+                        ><img src="./images/logo/icon2.png" alt="12% 할인"
+                      /></span>
+                      <div class="meal-card-thumb">
+                        <img
+                          src="./images/02_bancham/img2.jpg"
+                          alt="한우야채카레"
+                        />
+                        <span class="meal-card-lock" aria-hidden="true"
+                          ><img src="./images/logo/icon3.png" alt=""
+                        /></span>
+                      </div>
+                      <div class="meal-card-body">
+                        <div class="meal-card-badges">
+                          <span class="meal-card-badge meal-card-badge--best"
+                            >맵지않음</span
+                          >
+                        </div>
+                        <h3 class="meal-card-title">한우야채카레</h3>
+                        <p class="meal-card-desc">
+                          담백하고 부드러운 야채듬뿍 풍성하게
+                        </p>
+                        <div class="meal-card-price-row">
+                          <span class="meal-card-sale">12%</span>
+                          <strong class="meal-card-price">3,800원</strong>
+                        </div>
+                        <p class="meal-card-origin">4,300원</p>
+                      </div>
+                    </article>
+                  </div>
+
+                  <!-- 3 -->
+                  <div class="swiper-slide">
+                    <article class="meal-card" aria-label="집밥 카드 3">
+                      <span class="meal-card-sale-badge"
+                        ><img src="./images/logo/icon1.png" alt="11% 할인"
+                      /></span>
+                      <div class="meal-card-thumb">
+                        <img
+                          src="./images/02_bancham/img3.jpg"
+                          alt="한우 소고기 미역국"
+                        />
+                        <span class="meal-card-lock" aria-hidden="true"
+                          ><img src="./images/logo/icon3.png" alt=""
+                        /></span>
+                      </div>
+                      <div class="meal-card-body">
+                        <div class="meal-card-badges">
+                          <span class="meal-card-badge meal-card-badge--hot"
+                            >신제품</span
+                          >
+                          <span class="meal-card-badge meal-card-badge--best"
+                            >맵지않음</span
+                          >
+                        </div>
+                        <h3 class="meal-card-title">
+                          [원더스푼] 한우 소고기 미역국
+                        </h3>
+                        <p class="meal-card-desc">
+                          영양 가득 든든한 한우 어린이 미역국
+                        </p>
+                        <div class="meal-card-price-row">
+                          <span class="meal-card-sale">11%</span>
+                          <strong class="meal-card-price">4,700원</strong>
+                        </div>
+                        <p class="meal-card-origin">5,300원</p>
+                      </div>
+                    </article>
+                  </div>
+
+                  <!-- 4 -->
+                  <div class="swiper-slide">
+                    <article class="meal-card" aria-label="집밥 카드 4">
+                      <span class="meal-card-sale-badge"
+                        ><img src="./images/logo/icon2.png" alt="12% 할인"
+                      /></span>
+                      <div class="meal-card-thumb">
+                        <img
+                          src="./images/02_bancham/img4.jpg"
+                          alt="한끼 한돈 김치두루치기 완조리"
+                        />
+                        <span class="meal-card-lock" aria-hidden="true"
+                          ><img src="./images/logo/icon3.png" alt=""
+                        /></span>
+                      </div>
+                      <div class="meal-card-body">
+                        <div class="meal-card-badges"></div>
+                        <h3 class="meal-card-title">
+                          한끼 한돈 김치두루치기_완조리
+                        </h3>
+                        <p class="meal-card-desc">
+                          국내산 한돈으로 만든 든든한 한끼 두루치기
+                        </p>
+                        <div class="meal-card-price-row">
+                          <span class="meal-card-sale">12%</span>
+                          <strong class="meal-card-price">6,400원</strong>
+                        </div>
+                        <p class="meal-card-origin">7,300원</p>
+                      </div>
+                    </article>
+                  </div>
+
+                  <!-- 5 = 1 복제 -->
+                  <div class="swiper-slide">
+                    <article class="meal-card" aria-label="집밥 카드 5">
+                      <span class="meal-card-sale-badge"
+                        ><img src="./images/logo/icon1.png" alt="11% 할인"
+                      /></span>
+                      <div class="meal-card-thumb">
+                        <img
+                          src="./images/02_bancham/img5.jpg"
+                          alt="메추리알 간장조림"
+                        />
+                        <span class="meal-card-lock" aria-hidden="true"
+                          ><img src="./images/logo/icon3.png" alt=""
+                        /></span>
+                      </div>
+                      <div class="meal-card-body">
+                        <div class="meal-card-badges"></div>
+                        <h3 class="meal-card-title">메추리알 간장조림</h3>
+                        <div class="meal-card-price-row">
+                          <span class="meal-card-sale">11%</span>
+                          <strong class="meal-card-price">3,400원</strong>
+                        </div>
+                        <p class="meal-card-origin">4,300원</p>
+                      </div>
+                    </article>
+                  </div>
+
+                  <!-- 6 = 2 복제 -->
+                  <div class="swiper-slide">
+                    <article class="meal-card" aria-label="집밥 카드 6">
+                      <span class="meal-card-sale-badge"
+                        ><img src="./images/logo/icon2.png" alt="12% 할인"
+                      /></span>
+                      <div class="meal-card-thumb">
+                        <img
+                          src="./images/02_bancham/img6.jpg"
+                          alt="한우야채카레"
+                        />
+                        <span class="meal-card-lock" aria-hidden="true"
+                          ><img src="./images/logo/icon3.png" alt=""
+                        /></span>
+                      </div>
+                      <div class="meal-card-body">
+                        <div class="meal-card-badges">
+                          <span class="meal-card-badge meal-card-badge--best"
+                            >맵지않음</span
+                          >
+                        </div>
+                        <h3 class="meal-card-title">한우야채카레</h3>
+                        <p class="meal-card-desc">
+                          담백하고 부드러운 야채듬뿍 풍성하게
+                        </p>
+                        <div class="meal-card-price-row">
+                          <span class="meal-card-sale">12%</span>
+                          <strong class="meal-card-price">3,800원</strong>
+                        </div>
+                        <p class="meal-card-origin">4,300원</p>
+                      </div>
+                    </article>
+                  </div>
+
+                  <!-- 7 = 3 복제 -->
+                  <div class="swiper-slide">
+                    <article class="meal-card" aria-label="집밥 카드 7">
+                      <span class="meal-card-sale-badge"
+                        ><img src="./images/logo/icon1.png" alt="11% 할인"
+                      /></span>
+                      <div class="meal-card-thumb">
+                        <img
+                          src="./images/02_bancham/img7.jpg"
+                          alt="한우 소고기 미역국"
+                        />
+                        <span class="meal-card-lock" aria-hidden="true"
+                          ><img src="./images/logo/icon3.png" alt=""
+                        /></span>
+                      </div>
+                      <div class="meal-card-body">
+                        <div class="meal-card-badges">
+                          <span class="meal-card-badge meal-card-badge--hot"
+                            >신제품</span
+                          >
+                          <span class="meal-card-badge meal-card-badge--best"
+                            >맵지않음</span
+                          >
+                        </div>
+                        <h3 class="meal-card-title">
+                          [원더스푼] 한우 소고기 미역국
+                        </h3>
+                        <p class="meal-card-desc">
+                          영양 가득 든든한 한우 어린이 미역국
+                        </p>
+                        <div class="meal-card-price-row">
+                          <span class="meal-card-sale">11%</span>
+                          <strong class="meal-card-price">4,700원</strong>
+                        </div>
+                        <p class="meal-card-origin">5,300원</p>
+                      </div>
+                    </article>
+                  </div>
+
+                  <!-- 8 = 4 복제 -->
+                  <div class="swiper-slide">
+                    <article class="meal-card" aria-label="집밥 카드 8">
+                      <span class="meal-card-sale-badge"
+                        ><img src="./images/logo/icon1.png" alt="12% 할인"
+                      /></span>
+                      <div class="meal-card-thumb">
+                        <img
+                          src="./images/02_bancham/img4.jpg"
+                          alt="한끼 한돈 김치두루치기 완조리"
+                        />
+                        <span class="meal-card-lock" aria-hidden="true"
+                          ><img src="./images/logo/icon3.png" alt=""
+                        /></span>
+                      </div>
+                      <div class="meal-card-body">
+                        <div class="meal-card-badges"></div>
+                        <h3 class="meal-card-title">
+                          한끼 한돈 김치두루치기_완조리
+                        </h3>
+                        <p class="meal-card-desc">
+                          국내산 한돈으로 만든 든든한 한끼 두루치기
+                        </p>
+                        <div class="meal-card-price-row">
+                          <span class="meal-card-sale">12%</span>
+                          <strong class="meal-card-price">6,400원</strong>
+                        </div>
+                        <p class="meal-card-origin">7,300원</p>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+
+              <button
+                type="button"
+                class="meal-btn meal-next"
+                aria-label="다음"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M9.5 5.5L16 12l-6.5 6.5" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="content-box content-box--box4" aria-label="자식 박스 4">
+          <div class="box4-inner">
+            <div class="promo-banner-grid" aria-label="프로모션 배너 목록">
+              <a href="#" class="promo-banner" aria-label="프로모션 배너 1">
+                <img
+                  class="promo-banner__full-image"
+                  src="./images/00_banner/banner2.png"
+                  alt="프로모션 배너 1"
+                />
+              </a>
+              <a href="#" class="promo-banner" aria-label="프로모션 배너 2">
+                <img
+                  class="promo-banner__full-image"
+                  src="./images/00_banner/banner3.png"
+                  alt="프로모션 배너 2"
+                />
+              </a>
+              <a href="#" class="promo-banner" aria-label="프로모션 배너 3">
+                <img
+                  class="promo-banner__full-image"
+                  src="./images/00_banner/banner4.png"
+                  alt="프로모션 배너 3"
+                />
+              </a>
+            </div>
+          </div>
+        </article>
+        <article class="content-box content-box--box5" aria-label="자식 박스 5">
+          <div class="box5-inner">
+            <div class="box5-header" aria-label="박스 5 제목 영역">
+              <h2 class="box5-title">MD 추천반찬</h2>
+              <p class="box5-subtitle">
+                이번 주 가장 추천하는 제품만 골라 드려요
+              </p>
+            </div>
+
+            <ul class="md-filter-list" aria-label="MD 추천반찬 카테고리">
+              <li>
+                <button
+                  class="md-filter-button md-filter-button--active"
+                  type="button"
+                  data-md-tab="bibimbap"
+                >
+                  비빔밥
+                </button>
+              </li>
+              <li>
+                <button
+                  class="md-filter-button"
+                  type="button"
+                  data-md-tab="soup"
+                >
+                  국 / 찌개 / 탕
+                </button>
+              </li>
+              <li>
+                <button
+                  class="md-filter-button"
+                  type="button"
+                  data-md-tab="kids"
+                >
+                  어린이 반찬
+                </button>
+              </li>
+              <li>
+                <button
+                  class="md-filter-button"
+                  type="button"
+                  data-md-tab="stir"
+                >
+                  볶음
+                </button>
+              </li>
+              <li>
+                <button
+                  class="md-filter-button"
+                  type="button"
+                  data-md-tab="muchim"
+                >
+                  무침
+                </button>
+              </li>
+              <li>
+                <button
+                  class="md-filter-button"
+                  type="button"
+                  data-md-tab="main"
+                >
+                  메인요리
+                </button>
+              </li>
+              <li>
+                <button
+                  class="md-filter-button"
+                  type="button"
+                  data-md-tab="jorim"
+                >
+                  조림
+                </button>
+              </li>
+            </ul>
+
+            <div
+              class="card-grid md-tab-panel md-tab-panel--active"
+              data-md-panel="bibimbap"
+              aria-label="비빔밥 상품 목록"
+              aria-hidden="false"
+            >
+              <article class="food-card" aria-label="MD 추천 카드 1">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_bancham/img1.jpg"
+                    alt="매콤 콩나물 무침"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges"></div>
+                  <h3 class="food-card-title">매콤 콩나물 무침</h3>
+                  <p class="food-card-desc">
+                    참기름으로 아삭하게 무쳐낸 콩나물 무침
+                  </p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">3,200원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 2">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_bancham/img2.jpg"
+                    alt="브로콜리 두부무침"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--mild"
+                      >매진임박</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">브로콜리 두부무침</h3>
+                  <p class="food-card-desc">
+                    브로콜리를 담백한 두부에 버무렸어요
+                  </p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">3,800원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 3">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_bancham/img3.jpg"
+                    alt="새콤달콤 도라지무침"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges"></div>
+                  <h3 class="food-card-title">새콤달콤 도라지무침</h3>
+                  <p class="food-card-desc">
+                    달콤한 도라지와 오이를 새콤하게 무쳤어요
+                  </p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">5,800원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 4">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_bancham/img4.jpg"
+                    alt="새콤달콤 오이맛살무침"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--mild"
+                      >매진임박</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">새콤달콤 오이맛살무침</h3>
+                  <p class="food-card-desc">
+                    함께하면 입맛을 돋우는 산뜻한 반찬
+                  </p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">3,800원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 5">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_bancham/img5.jpg"
+                    alt="원더스푼 된장국"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--new"
+                      >신제품</span
+                    ><span class="food-card-badge food-card-badge--mild"
+                      >매진임박</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">[원더스푼] 된장국</h3>
+                  <p class="food-card-desc">매일 먹어도 좋은 담백한 된장국</p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">3,300원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 6">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_bancham/img6.jpg"
+                    alt="원더스푼 맑은 순두부찌개"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--new"
+                      >신제품</span
+                    ><span class="food-card-badge food-card-badge--mild"
+                      >매진임박</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">[원더스푼] 맑은 순두부찌개</h3>
+                  <p class="food-card-desc">맑은 국물 순두부찌개, 아이도 OK</p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">4,300원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 7">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_bancham/img7.jpg"
+                    alt="원더스푼 맛살 계란 덮밥"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--new"
+                      >신제품</span
+                    ><span class="food-card-badge food-card-badge--mild"
+                      >매진임박</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">[원더스푼] 맛살 계란 덮밥</h3>
+                  <p class="food-card-desc">
+                    고소한 맛살과 부드러운 계란이 조화로운 덮밥
+                  </p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">4,300원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 8">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_bancham/img8.jpg"
+                    alt="원더스푼 한우 스테이크소스 덮밥"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--new"
+                      >신제품</span
+                    ><span class="food-card-badge food-card-badge--mild"
+                      >매진임박</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">
+                    [원더스푼] 한우 스테이크소스 덮밥
+                  </h3>
+                  <p class="food-card-desc">
+                    한우의 풍미를 그대로 담은 스테이크소스 덮밥
+                  </p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">4,500원</strong>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div
+              class="card-grid md-tab-panel"
+              data-md-panel="soup"
+              aria-label="국 / 찌개 / 탕 상품 목록"
+              aria-hidden="true"
+            >
+              <article class="food-card" aria-label="MD 추천 카드 1">
+                <div class="food-card-thumb">
+                  <img src="./images/05_md_2/img1.jpg" alt="매콤 콩나물 무침" />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges"></div>
+                  <h3 class="food-card-title">맑은 한우 배추국_냉동</h3>
+                  <p class="food-card-desc">
+                    담백하고 개운한. 배추와 한우의 깊은맛
+                  </p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">9,900원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 2">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_2/img2.jpg"
+                    alt="브로콜리 두부무침"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--mild"
+                      >매진임박</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">소고기 무국(냉동)</h3>
+                  <p class="food-card-desc">소고기와 무를 푹 끓여 시원한</p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">9,900원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 3">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_2/img3.jpg"
+                    alt="새콤달콤 도라지무침"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges"></div>
+                  <h3 class="food-card-title">한우사골곰탕(냉동)</h3>
+                  <p class="food-card-desc">국물이 진하고 담백해요</p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">7,300원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 4">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_2/img4.jpg"
+                    alt="새콤달콤 오이맛살무침"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--mild"
+                      >매진임박</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">배추 된장국(냉동)</h3>
+                  <p class="food-card-desc">국산콩 된장과 배추로 구수한</p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">8,300원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 5">
+                <div class="food-card-thumb">
+                  <img src="./images/05_md_2/img5.jpg" alt="원더스푼 된장국" />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--new"
+                      >신제품</span
+                    ><span class="food-card-badge food-card-badge--mild"
+                      >매진임박</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">감자국(냉동)</h3>
+                  <p class="food-card-desc">국내산 감자라 더 고소한</p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">8,800원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 6">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_2/img6.jpg"
+                    alt="원더스푼 맑은 순두부찌개"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--new"
+                      >신제품</span
+                    ><span class="food-card-badge food-card-badge--mild"
+                      >매진임박</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">김치콩나물국(냉동)</h3>
+                  <p class="food-card-desc">얼큰하고 시원한</p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">8,300원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 7">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_2/img7.jpg"
+                    alt="원더스푼 맛살 계란 덮밥"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--new"
+                      >신제품</span
+                    ><span class="food-card-badge food-card-badge--mild"
+                      >매진임박</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">오징어 무국(냉동)</h3>
+                  <p class="food-card-desc">시원하고 칼칼한 맛이 일품</p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">9,300원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 8">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_2/img8.jpg"
+                    alt="원더스푼 한우 스테이크소스 덮밥"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--new"
+                      >신제품</span
+                    ><span class="food-card-badge food-card-badge--mild"
+                      >매진임박</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">콩나물 황태국(냉동)</h3>
+                  <p class="food-card-desc">시원하고 담백한</p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">9,300원</strong>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div
+              class="card-grid md-tab-panel"
+              data-md-panel="kids"
+              aria-label="어린이 반찬 상품 목록"
+              aria-hidden="true"
+            >
+              <article class="food-card" aria-label="MD 추천 카드 1">
+                <div class="food-card-thumb">
+                  <img src="./images/05_md_3/img1.jpg" alt="매콤 콩나물 무침" />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges"></div>
+                  <h3 class="food-card-title">검은콩조림</h3>
+                  <p class="food-card-desc">국내산 검은콩은 약콩입니다</p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">3,800원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 2">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_3/img2.jpg"
+                    alt="브로콜리 두부무침"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--mild"
+                      >매진임박</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">브로콜리 두부무침</h3>
+                  <p class="food-card-desc">
+                    브로콜리를 담백한 두부에 버무렸어요
+                  </p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">3,900원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 3">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_3/img3.jpg"
+                    alt="새콤달콤 도라지무침"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges"></div>
+                  <h3 class="food-card-title">호두 멸치볶음</h3>
+                  <p class="food-card-desc">
+                    잔멸치와 호두가 만나 짭쪼름하지만 고소하게!
+                  </p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">4,800원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 4">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_3/img4.jpg"
+                    alt="새콤달콤 오이맛살무침"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--mild"
+                      >매진임박</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">새콤 오이무생채</h3>
+                  <p class="food-card-desc">아이들이 먹기 좋은 깔끔한 무생채</p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">2,900원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 5">
+                <div class="food-card-thumb">
+                  <img src="./images/05_md_3/img5.jpg" alt="원더스푼 된장국" />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--new"
+                      >신제품</span
+                    ><span class="food-card-badge food-card-badge--mild"
+                      >매진임박</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">야채 계란찜</h3>
+                  <p class="food-card-desc">야채가득 알록달록 계란찜</p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">4,900원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 6">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_3/img6.jpg"
+                    alt="원더스푼 맑은 순두부찌개"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--new"
+                      >신제품</span
+                    ><span class="food-card-badge food-card-badge--mild"
+                      >매진임박</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">간장 감자조림</h3>
+                  <p class="food-card-desc">포근포근 잘 익혔어요</p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">3,900원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 7">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_3/img7.jpg"
+                    alt="원더스푼 맛살 계란 덮밥"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--new"
+                      >신제품</span
+                    ><span class="food-card-badge food-card-badge--mild"
+                      >매진임박</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">마카로니 범벅</h3>
+                  <p class="food-card-desc">알록달록 다채로운</p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">4,300원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 8">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_3/img8.jpg"
+                    alt="원더스푼 한우 스테이크소스 덮밥"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--new"
+                      >신제품</span
+                    ><span class="food-card-badge food-card-badge--mild"
+                      >매진임박</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">순두부 계란찜</h3>
+                  <p class="food-card-desc">보들보들 고소한 맛</p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">4,900원</strong>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div
+              class="card-grid md-tab-panel"
+              data-md-panel="stir"
+              aria-label="볶음 상품 목록"
+              aria-hidden="true"
+            >
+              <article class="food-card" aria-label="MD 추천 카드 1">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_bancham/img1.jpg"
+                    alt="매콤 콩나물 무침"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges"></div>
+                  <h3 class="food-card-title">매콤 콩나물 무침</h3>
+                  <p class="food-card-desc">
+                    참기름으로 아삭하게 무쳐낸 콩나물 무침
+                  </p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">3,200원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 2">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_bancham/img2.jpg"
+                    alt="브로콜리 두부무침"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--mild"
+                      >매진임박</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">브로콜리 두부무침</h3>
+                  <p class="food-card-desc">
+                    브로콜리를 담백한 두부에 버무렸어요
+                  </p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">3,800원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 3">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_bancham/img3.jpg"
+                    alt="새콤달콤 도라지무침"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges"></div>
+                  <h3 class="food-card-title">새콤달콤 도라지무침</h3>
+                  <p class="food-card-desc">
+                    달콤한 도라지와 오이를 새콤하게 무쳤어요
+                  </p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">5,800원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 4">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_bancham/img4.jpg"
+                    alt="새콤달콤 오이맛살무침"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--mild"
+                      >매진임박</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">새콤달콤 오이맛살무침</h3>
+                  <p class="food-card-desc">
+                    함께하면 입맛을 돋우는 산뜻한 반찬
+                  </p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">3,800원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 5">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_bancham/img5.jpg"
+                    alt="원더스푼 된장국"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--new"
+                      >신제품</span
+                    ><span class="food-card-badge food-card-badge--mild"
+                      >매진임박</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">[원더스푼] 된장국</h3>
+                  <p class="food-card-desc">매일 먹어도 좋은 담백한 된장국</p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">3,300원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 6">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_bancham/img6.jpg"
+                    alt="원더스푼 맑은 순두부찌개"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--new"
+                      >신제품</span
+                    ><span class="food-card-badge food-card-badge--mild"
+                      >매진임박</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">[원더스푼] 맑은 순두부찌개</h3>
+                  <p class="food-card-desc">맑은 국물 순두부찌개, 아이도 OK</p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">4,300원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 7">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_bancham/img7.jpg"
+                    alt="원더스푼 맛살 계란 덮밥"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--new"
+                      >신제품</span
+                    ><span class="food-card-badge food-card-badge--mild"
+                      >매진임박</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">[원더스푼] 맛살 계란 덮밥</h3>
+                  <p class="food-card-desc">
+                    고소한 맛살과 부드러운 계란이 조화로운 덮밥
+                  </p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">4,300원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 8">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_bancham/img8.jpg"
+                    alt="원더스푼 한우 스테이크소스 덮밥"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--new"
+                      >신제품</span
+                    ><span class="food-card-badge food-card-badge--mild"
+                      >매진임박</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">
+                    [원더스푼] 한우 스테이크소스 덮밥
+                  </h3>
+                  <p class="food-card-desc">
+                    한우의 풍미를 그대로 담은 스테이크소스 덮밥
+                  </p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">4,500원</strong>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div
+              class="card-grid md-tab-panel"
+              data-md-panel="muchim"
+              aria-label="무침 상품 목록"
+              aria-hidden="true"
+            >
+              <article class="food-card" aria-label="MD 추천 카드 1">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_bancham/img1.jpg"
+                    alt="매콤 콩나물 무침"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges"></div>
+                  <h3 class="food-card-title">매콤 콩나물 무침</h3>
+                  <p class="food-card-desc">
+                    참기름으로 아삭하게 무쳐낸 콩나물 무침
+                  </p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">3,200원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 2">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_bancham/img2.jpg"
+                    alt="브로콜리 두부무침"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--mild"
+                      >매진임박</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">브로콜리 두부무침</h3>
+                  <p class="food-card-desc">
+                    브로콜리를 담백한 두부에 버무렸어요
+                  </p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">3,800원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 3">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_bancham/img3.jpg"
+                    alt="새콤달콤 도라지무침"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges"></div>
+                  <h3 class="food-card-title">새콤달콤 도라지무침</h3>
+                  <p class="food-card-desc">
+                    달콤한 도라지와 오이를 새콤하게 무쳤어요
+                  </p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">5,800원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 4">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_bancham/img4.jpg"
+                    alt="새콤달콤 오이맛살무침"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--mild"
+                      >매진임박</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">새콤달콤 오이맛살무침</h3>
+                  <p class="food-card-desc">
+                    함께하면 입맛을 돋우는 산뜻한 반찬
+                  </p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">3,800원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 5">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_bancham/img5.jpg"
+                    alt="원더스푼 된장국"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--new"
+                      >신제품</span
+                    ><span class="food-card-badge food-card-badge--mild"
+                      >매진임박</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">[원더스푼] 된장국</h3>
+                  <p class="food-card-desc">매일 먹어도 좋은 담백한 된장국</p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">3,300원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 6">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_bancham/img6.jpg"
+                    alt="원더스푼 맑은 순두부찌개"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--new"
+                      >신제품</span
+                    ><span class="food-card-badge food-card-badge--mild"
+                      >매진임박</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">[원더스푼] 맑은 순두부찌개</h3>
+                  <p class="food-card-desc">맑은 국물 순두부찌개, 아이도 OK</p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">4,300원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 7">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_bancham/img7.jpg"
+                    alt="원더스푼 맛살 계란 덮밥"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--new"
+                      >신제품</span
+                    ><span class="food-card-badge food-card-badge--mild"
+                      >매진임박</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">[원더스푼] 맛살 계란 덮밥</h3>
+                  <p class="food-card-desc">
+                    고소한 맛살과 부드러운 계란이 조화로운 덮밥
+                  </p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">4,300원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 8">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_bancham/img8.jpg"
+                    alt="원더스푼 한우 스테이크소스 덮밥"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--new"
+                      >신제품</span
+                    ><span class="food-card-badge food-card-badge--mild"
+                      >매진임박</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">
+                    [원더스푼] 한우 스테이크소스 덮밥
+                  </h3>
+                  <p class="food-card-desc">
+                    한우의 풍미를 그대로 담은 스테이크소스 덮밥
+                  </p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">4,500원</strong>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div
+              class="card-grid md-tab-panel"
+              data-md-panel="main"
+              aria-label="메인요리 상품 목록"
+              aria-hidden="true"
+            >
+              <article class="food-card" aria-label="MD 추천 카드 1">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_bancham/img1.jpg"
+                    alt="매콤 콩나물 무침"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges"></div>
+                  <h3 class="food-card-title">매콤 콩나물 무침</h3>
+                  <p class="food-card-desc">
+                    참기름으로 아삭하게 무쳐낸 콩나물 무침
+                  </p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">3,200원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 2">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_bancham/img2.jpg"
+                    alt="브로콜리 두부무침"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--mild"
+                      >매진임박</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">브로콜리 두부무침</h3>
+                  <p class="food-card-desc">
+                    브로콜리를 담백한 두부에 버무렸어요
+                  </p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">3,800원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 3">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_bancham/img3.jpg"
+                    alt="새콤달콤 도라지무침"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges"></div>
+                  <h3 class="food-card-title">새콤달콤 도라지무침</h3>
+                  <p class="food-card-desc">
+                    달콤한 도라지와 오이를 새콤하게 무쳤어요
+                  </p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">5,800원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 4">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_bancham/img4.jpg"
+                    alt="새콤달콤 오이맛살무침"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--mild"
+                      >매진임박</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">새콤달콤 오이맛살무침</h3>
+                  <p class="food-card-desc">
+                    함께하면 입맛을 돋우는 산뜻한 반찬
+                  </p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">3,800원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 5">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_bancham/img5.jpg"
+                    alt="원더스푼 된장국"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--new"
+                      >신제품</span
+                    ><span class="food-card-badge food-card-badge--mild"
+                      >매진임박</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">[원더스푼] 된장국</h3>
+                  <p class="food-card-desc">매일 먹어도 좋은 담백한 된장국</p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">3,300원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 6">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_bancham/img6.jpg"
+                    alt="원더스푼 맑은 순두부찌개"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--new"
+                      >신제품</span
+                    ><span class="food-card-badge food-card-badge--mild"
+                      >매진임박</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">[원더스푼] 맑은 순두부찌개</h3>
+                  <p class="food-card-desc">맑은 국물 순두부찌개, 아이도 OK</p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">4,300원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 7">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_bancham/img7.jpg"
+                    alt="원더스푼 맛살 계란 덮밥"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--new"
+                      >신제품</span
+                    ><span class="food-card-badge food-card-badge--mild"
+                      >매진임박</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">[원더스푼] 맛살 계란 덮밥</h3>
+                  <p class="food-card-desc">
+                    고소한 맛살과 부드러운 계란이 조화로운 덮밥
+                  </p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">4,300원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 8">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_bancham/img8.jpg"
+                    alt="원더스푼 한우 스테이크소스 덮밥"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--new"
+                      >신제품</span
+                    ><span class="food-card-badge food-card-badge--mild"
+                      >매진임박</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">
+                    [원더스푼] 한우 스테이크소스 덮밥
+                  </h3>
+                  <p class="food-card-desc">
+                    한우의 풍미를 그대로 담은 스테이크소스 덮밥
+                  </p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">4,500원</strong>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div
+              class="card-grid md-tab-panel"
+              data-md-panel="jorim"
+              aria-label="조림 상품 목록"
+              aria-hidden="true"
+            >
+              <article class="food-card" aria-label="MD 추천 카드 1">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_bancham/img1.jpg"
+                    alt="매콤 콩나물 무침"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges"></div>
+                  <h3 class="food-card-title">매콤 콩나물 무침</h3>
+                  <p class="food-card-desc">
+                    참기름으로 아삭하게 무쳐낸 콩나물 무침
+                  </p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">3,200원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 2">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_bancham/img2.jpg"
+                    alt="브로콜리 두부무침"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--mild"
+                      >매진임박</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">브로콜리 두부무침</h3>
+                  <p class="food-card-desc">
+                    브로콜리를 담백한 두부에 버무렸어요
+                  </p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">3,800원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 3">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_bancham/img3.jpg"
+                    alt="새콤달콤 도라지무침"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges"></div>
+                  <h3 class="food-card-title">새콤달콤 도라지무침</h3>
+                  <p class="food-card-desc">
+                    달콤한 도라지와 오이를 새콤하게 무쳤어요
+                  </p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">5,800원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 4">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_bancham/img4.jpg"
+                    alt="새콤달콤 오이맛살무침"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--mild"
+                      >매진임박</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">새콤달콤 오이맛살무침</h3>
+                  <p class="food-card-desc">
+                    함께하면 입맛을 돋우는 산뜻한 반찬
+                  </p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">3,800원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 5">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_bancham/img5.jpg"
+                    alt="원더스푼 된장국"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--new"
+                      >신제품</span
+                    ><span class="food-card-badge food-card-badge--mild"
+                      >매진임박</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">[원더스푼] 된장국</h3>
+                  <p class="food-card-desc">매일 먹어도 좋은 담백한 된장국</p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">3,300원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 6">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_bancham/img6.jpg"
+                    alt="원더스푼 맑은 순두부찌개"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--new"
+                      >신제품</span
+                    ><span class="food-card-badge food-card-badge--mild"
+                      >매진임박</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">[원더스푼] 맑은 순두부찌개</h3>
+                  <p class="food-card-desc">맑은 국물 순두부찌개, 아이도 OK</p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">4,300원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 7">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_bancham/img7.jpg"
+                    alt="원더스푼 맛살 계란 덮밥"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--new"
+                      >신제품</span
+                    ><span class="food-card-badge food-card-badge--mild"
+                      >매진임박</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">[원더스푼] 맛살 계란 덮밥</h3>
+                  <p class="food-card-desc">
+                    고소한 맛살과 부드러운 계란이 조화로운 덮밥
+                  </p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">4,300원</strong>
+                  </div>
+                </div>
+              </article>
+              <article class="food-card" aria-label="MD 추천 카드 8">
+                <div class="food-card-thumb">
+                  <img
+                    src="./images/05_md_bancham/img8.jpg"
+                    alt="원더스푼 한우 스테이크소스 덮밥"
+                  />
+                </div>
+                <div class="food-card-body">
+                  <div class="food-card-badges">
+                    <span class="food-card-badge food-card-badge--new"
+                      >신제품</span
+                    ><span class="food-card-badge food-card-badge--mild"
+                      >매진임박</span
+                    >
+                  </div>
+                  <h3 class="food-card-title">
+                    [원더스푼] 한우 스테이크소스 덮밥
+                  </h3>
+                  <p class="food-card-desc">
+                    한우의 풍미를 그대로 담은 스테이크소스 덮밥
+                  </p>
+                  <div class="food-card-price-row">
+                    <strong class="food-card-price">4,500원</strong>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <button class="scroll-top-button" type="button" aria-label="맨 위로 이동">
+      TOP
+    </button>
+
+    <div class="footer-divider" aria-hidden="true"></div>
+
+    <footer class="site-footer" aria-label="풋터 영역">
+      <div class="footer-box-group" aria-label="풋터 자식 박스 영역">
+        <div class="footer-box footer-box--left" aria-label="풋터 자식 박스 1">
+          <div class="footer-content">
+            <p class="footer-contact">
+              고객센터
+              <span class="footer-contact-phone">1588-3754</span>
+              zipbanchan@sannamchon.co.kr
+            </p>
+            <p class="footer-text">
+              평일 08:30~17:30 / 토요일 08:30~12:00<br />
+              점심시간 12:00~13:00<br />
+              일요일, 공휴일은 휴무입니다.
+            </p>
+          </div>
+        </div>
+        <div class="footer-box footer-box--right" aria-label="풋터 자식 박스 2">
+          <div class="footer-content">
+            <p class="footer-title">집반찬연구소</p>
+            <p class="footer-text">
+              인천광역시 서구 가석로 26(가좌동)
+              집반찬연구소&nbsp;&nbsp;&nbsp;&nbsp;대표자 : 박종철<br />
+              사업자등록번호 : 121-86-17743&nbsp;&nbsp;&nbsp;&nbsp;통신판매업
+              신고번호 : 제 2023-인천서구-3834
+              호&nbsp;&nbsp;&nbsp;&nbsp;개인정보보호책임자 : 정문채<br />
+              제휴 문의 : zipbanchan@sannamchon.co.kr
+            </p>
+            <p class="footer-links">
+              집반찬연구소 소개&nbsp;&nbsp;이용약관&nbsp;&nbsp;개인정보처리방침
+            </p>
+            <p class="footer-copy">
+              Copyright ⓒ SANNAMCHON CORP. All Rights Reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="./script/script.js"></script>
+  </body>
+</html>

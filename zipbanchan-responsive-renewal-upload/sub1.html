@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>상품상세화면</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/sub1.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- 헤더 영역 -->
+      <header class="site-header" aria-label="헤더 영역">
+        <div class="header-box-group" aria-label="헤더 자식 박스 영역">
+          <div class="header-box header-box--search" aria-label="search 박스">
+            <div class="search-box">
+              <input
+                type="text"
+                placeholder="반찬을 입력해주세요."
+                aria-label="검색어 입력"
+              />
+              <button class="search-button" type="button" aria-label="검색">
+                <img src="./images/logo/icon4.png" alt="검색" />
+              </button>
+            </div>
+          </div>
+          <div class="header-box header-box--logo" aria-label="logo 박스">
+            <a
+              href="./main.html"
+              class="header-link logo-box"
+              aria-label="집반찬연구소 로고"
+            >
+              <img src="./images/logo/logo1.png" alt="집반찬연구소" />
+            </a>
+          </div>
+          <div class="header-box header-box--right" aria-label="right 박스">
+            <div class="utility-box">
+              <div class="utility-top">
+                <span class="utility-item">로그인</span>
+                <span class="utility-item">회원가입</span>
+                <span class="utility-item">내정보</span>
+              </div>
+              <div class="utility-bottom">
+                <span class="utility-icon-item"
+                  ><img
+                    src="./images/logo/icon4.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />전화주문</span
+                >
+                <span class="utility-icon-item"
+                  ><img
+                    src="./images/logo/icon5.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />브랜드</span
+                >
+                <span class="utility-icon-item"
+                  ><img
+                    src="./images/logo/icon6.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />반찬보기</span
+                >
+                <span class="utility-icon-item"
+                  ><img
+                    src="./images/logo/icon7.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />장바구니</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- 메인 영역 -->
+      <main class="main">
+        <section class="box box1">
+          <div class="box1-inner">
+            <div class="box1-image">
+              <img
+                src="./images/Details/1boximg.png"
+                alt="쭈꾸미 풋마늘 파스타"
+              />
+            </div>
+
+            <div class="box1-info">
+              <h2 class="product-title">쭈꾸미 풋마늘 파스타</h2>
+              <p class="product-desc">
+                봄기운 가득! 쭈꾸미와 풋마늘의 찰떡 궁합
+              </p>
+
+              <div class="price-row">
+                <span class="discount-rate">7%</span>
+                <strong class="sale-price">12,800원</strong>
+              </div>
+
+              <p class="origin-price">13,800원</p>
+
+              <div class="info-line">
+                <span>상품 수량</span>
+                <div class="qty-box">
+                  <button type="button" class="qty-btn">-</button>
+                  <span class="qty-num">1</span>
+                  <button type="button" class="qty-btn">+</button>
+                </div>
+              </div>
+
+              <div class="total-line">
+                <span class="total-label">총 상품금액</span>
+                <strong class="total-price">12,800원</strong>
+              </div>
+
+              <div class="action-row">
+                <button type="button" class="wish-btn">♡</button>
+                <button type="button" class="cart-btn">장바구니 보기</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="box box2">
+          <div class="box2-inner">
+            <img
+              class="box2-icon"
+              src="./images/Details/1boxicon.svg"
+              alt="별 아이콘"
+            />
+            <p>4.9 6396명의 고객님이 인증한 반찬</p>
+          </div>
+        </section>
+
+        <section class="box box3">
+          <div class="box3-inner">
+            <button type="button" class="box3-tab is-active">반찬설명</button>
+            <button type="button" class="box3-tab">상품 정보</button>
+            <button type="button" class="box3-tab">상품후기</button>
+          </div>
+        </section>
+
+        <section class="box box4">
+          <div class="box4-inner">
+            <img
+              src="./images/Details/box3img1.png"
+              alt="쭈꾸미 풋마늘 파스타 이미지"
+              class="box4-image box4-image1"
+            />
+
+            <div class="box4-copy">
+              <h3 class="box4-title">쭈꾸미 풋마늘 파스타 320g</h3>
+              <p class="box4-subtitle">
+                봄기운 가득! 쭈꾸미와 풋마늘의 찰떡 궁합
+              </p>
+              <p class="box4-desc">
+                봄기운 가득! 탱글한 제철 쭈꾸미와 싱그러운 풋마늘이 만났어요.
+                여기에 부드럽고 고소한 미나리 페스토와 입맛 돋우는
+                새콤달콤매콤한 비법 소스가 더해져 깊은 풍미의 반전을 선사합니다.
+                생긋하게 살아있는 풋마늘 특유의 알싸한 향과 달큰함이 쫄깃한
+                쭈꾸미, 그리고 중독성 있는 소스와 어우러져 입안 가득 청량한 봄의
+                기운을 전해줘요. 4월 한정판매라 언제 끝날지 모르니, 늦기 전에 이
+                생생한 계절의 맛을 선점하세요!
+              </p>
+            </div>
+
+            <h4 class="box4-section-title">담음새</h4>
+            <img
+              src="./images/Details/box3img2.jpg"
+              alt="쭈꾸미 풋마늘 파스타 포장 정보"
+              class="box4-image box4-image2"
+            />
+
+            <h4 class="box4-section-title">상세정보</h4>
+            <img
+              src="./images/Details/box3img3.jpg"
+              alt="쭈꾸미 풋마늘 파스타 상세 정보"
+              class="box4-image box4-image3"
+            />
+
+            <div class="box4-table">
+              <div class="box4-table-row">
+                <div class="box4-table-label">제품명</div>
+                <div class="box4-table-value">상세정보참고</div>
+              </div>
+              <div class="box4-table-row">
+                <div class="box4-table-label">용량</div>
+                <div class="box4-table-value">상세정보참고</div>
+              </div>
+              <div class="box4-table-row">
+                <div class="box4-table-label">소비기한</div>
+                <div class="box4-table-value">상세정보참고</div>
+              </div>
+              <div class="box4-table-row">
+                <div class="box4-table-label">원재료명 및 함량</div>
+                <div class="box4-table-value">상세정보참고</div>
+              </div>
+              <div class="box4-table-row">
+                <div class="box4-table-label">보관방법(취급방법)</div>
+                <div class="box4-table-value">상세정보참고</div>
+              </div>
+              <div class="box4-table-row">
+                <div class="box4-table-label">식품의 유형</div>
+                <div class="box4-table-value">상세정보참고</div>
+              </div>
+              <div class="box4-table-row">
+                <div class="box4-table-label">포장재질</div>
+                <div class="box4-table-value">상세정보참고</div>
+              </div>
+              <div class="box4-table-row">
+                <div class="box4-table-label">제조원 및 판매원</div>
+                <div class="box4-table-value">상세정보참고</div>
+              </div>
+              <div class="box4-table-row">
+                <div class="box4-table-label">알레르기식품</div>
+                <div class="box4-table-value">상세정보참고</div>
+              </div>
+              <div class="box4-table-row">
+                <div class="box4-table-label">부정/불량식품 신고표시</div>
+                <div class="box4-table-value">상세정보참고</div>
+              </div>
+              <div class="box4-table-row">
+                <div class="box4-table-label">소비자분쟁해결기준</div>
+                <div class="box4-table-value">상세정보참고</div>
+              </div>
+              <div class="box4-table-row">
+                <div class="box4-table-label">소비자 상담 관련 전화번호</div>
+                <div class="box4-table-value">상세정보참고</div>
+              </div>
+              <div class="box4-table-row">
+                <div class="box4-table-label">품목보고번호</div>
+                <div class="box4-table-value">상세정보참고</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="box box5">
+          <div class="box5-inner">
+            <h3 class="box5-title">같이 먹으면 더 맛있는 반찬</h3>
+            <p class="box5-desc">
+              이 반찬을 보신 다른 고객님이 같이 담은 반찬이에요!
+            </p>
+
+            <div class="box5-list">
+              <article class="box5-card">
+                <div class="box5-image-wrap">
+                  <img
+                    src="./images/Details/box4img1.jpg"
+                    alt="콩나물무침"
+                    class="box5-image"
+                  />
+                  <img
+                    src="./images/Details/box4icon1.png"
+                    alt="장바구니 아이콘"
+                    class="box5-cart-icon"
+                  />
+                </div>
+                <div class="box5-info">
+                  <p class="box5-item-title">콩나물무침</p>
+                  <p class="box5-item-desc">참깨기름으로 고소하게</p>
+                  <p class="box5-item-price">2,800원</p>
+                </div>
+              </article>
+
+              <article class="box5-card">
+                <div class="box5-image-wrap">
+                  <img
+                    src="./images/Details/box4img2.jpg"
+                    alt="양파고추 장아찌"
+                    class="box5-image"
+                  />
+                  <img
+                    src="./images/Details/box4icon1.png"
+                    alt="장바구니 아이콘"
+                    class="box5-cart-icon"
+                  />
+                </div>
+                <div class="box5-info">
+                  <p class="box5-item-title">양파고추 장아찌</p>
+                  <p class="box5-item-desc">고기와 무한 찰떡궁합</p>
+                  <p class="box5-item-price">3,900원</p>
+                </div>
+              </article>
+
+              <article class="box5-card">
+                <div class="box5-image-wrap">
+                  <img
+                    src="./images/Details/box4img3.jpg"
+                    alt="오삼불고기 반조리"
+                    class="box5-image"
+                  />
+                  <img
+                    src="./images/Details/box4icon1.png"
+                    alt="장바구니 아이콘"
+                    class="box5-cart-icon"
+                  />
+                </div>
+                <div class="box5-info">
+                  <p class="box5-item-title">오삼불고기 반조리</p>
+                  <p class="box5-item-desc">
+                    쫄깃한 오징어와 고소한 삼겹살의 환상 조합
+                  </p>
+                  <p class="box5-item-price">14,300원</p>
+                </div>
+              </article>
+
+              <article class="box5-card">
+                <div class="box5-image-wrap">
+                  <img
+                    src="./images/Details/box4img4.jpg"
+                    alt="한우야채카레 대용량"
+                    class="box5-image"
+                  />
+                  <img
+                    src="./images/Details/box4icon1.png"
+                    alt="장바구니 아이콘"
+                    class="box5-cart-icon"
+                  />
+                </div>
+                <div class="box5-info">
+                  <p class="box5-item-title">한우야채카레_대용량</p>
+                  <p class="box5-item-desc">부족함 없이 넉넉하게 담아</p>
+                  <p class="box5-item-price">7,300원</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="box box6">
+          <div class="box6-inner">
+            <h3 class="box6-title">상품후기</h3>
+            <p class="box6-photo-title">사진후기</p>
+
+            <div class="box6-photo-list">
+              <img
+                src="./images/box5/img1.jpg"
+                alt="상품후기 이미지 1"
+                class="box6-photo"
+              />
+              <img
+                src="./images/box5/img2.jpg"
+                alt="상품후기 이미지 2"
+                class="box6-photo"
+              />
+              <img
+                src="./images/box5/img3.jpg"
+                alt="상품후기 이미지 3"
+                class="box6-photo"
+              />
+              <img
+                src="./images/box5/img4.jpg"
+                alt="상품후기 이미지 4"
+                class="box6-photo"
+              />
+              <img
+                src="./images/box5/img5.jpg"
+                alt="상품후기 이미지 5"
+                class="box6-photo"
+              />
+              <img
+                src="./images/box5/img6.jpg"
+                alt="상품후기 이미지 6"
+                class="box6-photo"
+              />
+            </div>
+
+            <div class="box6-review">
+              <div class="box6-review-top">
+                <div class="box6-review-left">
+                  <span class="box6-review-name">김*의</span>
+                  <span class="box6-review-badge">1회 구매</span>
+
+                  <div class="box6-review-stars" aria-label="별점 5점">
+                    <img
+                      src="./images/Details/1boxicon.svg"
+                      alt=""
+                      class="box6-star"
+                    />
+                    <img
+                      src="./images/Details/1boxicon.svg"
+                      alt=""
+                      class="box6-star"
+                    />
+                    <img
+                      src="./images/Details/1boxicon.svg"
+                      alt=""
+                      class="box6-star"
+                    />
+                    <img
+                      src="./images/Details/1boxicon.svg"
+                      alt=""
+                      class="box6-star"
+                    />
+                    <img
+                      src="./images/Details/1boxicon.svg"
+                      alt=""
+                      class="box6-star"
+                    />
+                  </div>
+                </div>
+
+                <p class="box6-review-text">
+                  매 주문시마다 맛있게 먹고 있습니다.
+                </p>
+              </div>
+
+              <p class="box6-review-date">2026.04.01</p>
+            </div>
+          </div>
+        </section>
+      </main>
+      <div class="footer-divider" aria-hidden="true"></div>
+      <!-- 풋터 영역 -->
+      <footer class="site-footer" aria-label="풋터 영역">
+        <div class="footer-box-group" aria-label="풋터 자식 박스 영역">
+          <div
+            class="footer-box footer-box--left"
+            aria-label="풋터 자식 박스 1"
+          >
+            <div class="footer-content">
+              <p class="footer-contact">
+                고객센터
+                <span class="footer-contact-phone">1588-3754</span>
+                zipbanchan@sannamchon.co.kr
+              </p>
+              <p class="footer-text">
+                평일 08:30~17:30 / 토요일 08:30~12:00<br />
+                점심시간 12:00~13:00<br />
+                일요일, 공휴일은 휴무입니다.
+              </p>
+            </div>
+          </div>
+          <div
+            class="footer-box footer-box--right"
+            aria-label="풋터 자식 박스 2"
+          >
+            <div class="footer-content">
+              <p class="footer-title">집반찬연구소</p>
+              <p class="footer-text">
+                인천광역시 서구 가석로 26(가좌동)
+                집반찬연구소&nbsp;&nbsp;&nbsp;&nbsp;대표자 : 박종철<br />
+                사업자등록번호 : 121-86-17743&nbsp;&nbsp;&nbsp;&nbsp;통신판매업
+                신고번호 : 제 2023-인천서구-3834
+                호&nbsp;&nbsp;&nbsp;&nbsp;개인정보보호책임자 : 정문채<br />
+                제휴 문의 : zipbanchan@sannamchon.co.kr
+              </p>
+              <p class="footer-links">
+                집반찬연구소
+                소개&nbsp;&nbsp;이용약관&nbsp;&nbsp;개인정보처리방침
+              </p>
+              <p class="footer-copy">
+                Copyright ⓒ SANNAMCHON CORP. All Rights Reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- </div class="wrap"> -->
+  </body>
+</html>
