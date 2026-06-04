@@ -22,6 +22,7 @@ body {
 
 body {
   min-height: 100vh;
+  overflow-x: hidden;
   font-family: Arial, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
 }
 
@@ -198,8 +199,7 @@ body {
     center / cover no-repeat;
 } */
 .main-visual {
-  width: 100%;
-  max-width: 1920px;
+  width: min(100%, var(--inner-width));
   height: 480px;
   margin: 0 auto;
   position: relative;
@@ -234,7 +234,7 @@ body {
 /* 이전/다음 버튼 */
 .mv-nav {
   position: absolute;
-  left: 358px;
+  left: 80px;
   bottom: 23px;
   z-index: 10;
   display: flex;
@@ -270,7 +270,7 @@ body {
 /* 페이지 표시 1/5 */
 .mv-fraction {
   position: absolute;
-  right: 363px;
+  right: 80px;
   bottom: 23px;
   z-index: 10;
   min-width: 48px;
@@ -1756,4 +1756,6 @@ html {
 .md-tab-panel.md-tab-panel--active {
   display: grid;
 }
+
+
 
