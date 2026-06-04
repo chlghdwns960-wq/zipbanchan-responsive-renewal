@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 :root {
   --bg: #ffffff;
   --banner-color: #dc5755;
@@ -198,7 +198,8 @@ body {
     center / cover no-repeat;
 } */
 .main-visual {
-  width: 1920px;
+  width: 100%;
+  max-width: 1920px;
   height: 480px;
   margin: 0 auto;
   position: relative;
@@ -227,6 +228,7 @@ body {
   height: 100%;
   display: block;
   object-fit: cover;
+  object-position: center center;
 }
 
 /* 이전/다음 버튼 */
@@ -390,6 +392,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center center;
 }
 
 .md-filter-list {
@@ -1753,3 +1756,4 @@ html {
 .md-tab-panel.md-tab-panel--active {
   display: grid;
 }
+
