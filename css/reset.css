@@ -1,0 +1,19 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* li앞에 특수문자 초기화  */
+li {
+  list-style: none;
+}
+/* 글자에 하이퍼링크 아래 밑줄 제거 */
+a {
+  text-decoration: none;
+}
+/* 버튼 초기화 */
+button {
+  bottom: none;
+  background: none;
+}

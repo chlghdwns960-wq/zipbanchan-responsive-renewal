@@ -4,7 +4,7 @@
 
 ## Live Demo
 
-https://chlghdwns960-wq.github.io/zipbanchan-responsive-renewal/main.html
+https://chlghdwns960-wq.github.io/zipbanchan-responsive-renewal/
 
 ## Original Demo
 
@@ -26,7 +26,7 @@ https://chlghdwns960-wq.github.io/ai/ai_zipbancan/main.html
 
 ## Main Files
 
-- `main.html`
+- `index.html`
 - `sub1.html`
 - `css/`
 - `script/`
@@ -35,3 +35,4 @@ https://chlghdwns960-wq.github.io/ai/ai_zipbancan/main.html
 ## Portfolio Note
 
 PC의 상품 탐색 밀도와 모바일의 빠른 구매 흐름이 모두 보이도록 레이아웃을 재구성하는 데 초점을 둔 프로젝트입니다.
+
