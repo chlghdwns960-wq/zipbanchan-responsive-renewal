@@ -199,7 +199,7 @@ body {
     center / cover no-repeat;
 } */
 .main-visual {
-  width: min(100%, var(--inner-width));
+  width: 100%;
   height: 480px;
   margin: 0 auto;
   position: relative;
@@ -234,7 +234,7 @@ body {
 /* 이전/다음 버튼 */
 .mv-nav {
   position: absolute;
-  left: 80px;
+  left: max(24px, calc((100% - var(--inner-width)) / 2 + 80px));
   bottom: 23px;
   z-index: 10;
   display: flex;
@@ -270,7 +270,7 @@ body {
 /* 페이지 표시 1/5 */
 .mv-fraction {
   position: absolute;
-  right: 80px;
+  right: max(24px, calc((100% - var(--inner-width)) / 2 + 80px));
   bottom: 23px;
   z-index: 10;
   min-width: 48px;
@@ -1756,6 +1756,7 @@ html {
 .md-tab-panel.md-tab-panel--active {
   display: grid;
 }
+
 
 
 
