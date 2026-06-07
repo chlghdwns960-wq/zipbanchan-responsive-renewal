@@ -155,6 +155,45 @@ function initScrollTopButton() {
   });
 }
 
+// 모바일 헤더 메뉴를 열고 닫는 함수
+function initMobileMenu() {
+  const toggleButton = document.querySelector(".mobile-menu-toggle");
+  const menuPanel = document.querySelector(".mobile-menu-panel");
+  if (!toggleButton || !menuPanel) return;
+
+  const closeMenu = () => {
+    document.body.classList.remove("is-mobile-menu-open");
+    toggleButton.setAttribute("aria-expanded", "false");
+    toggleButton.setAttribute("aria-label", "모바일 메뉴 열기");
+  };
+
+  const openMenu = () => {
+    document.body.classList.add("is-mobile-menu-open");
+    toggleButton.setAttribute("aria-expanded", "true");
+    toggleButton.setAttribute("aria-label", "모바일 메뉴 닫기");
+  };
+
+  toggleButton.addEventListener("click", () => {
+    if (document.body.classList.contains("is-mobile-menu-open")) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  menuPanel.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", closeMenu);
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 768) closeMenu();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeMenu();
+  });
+}
+
 // 페이지 로드 후 모든 기능을 실행하는 함수
 function initPageInteractions() {
   initMainVisualSwiper();
@@ -162,6 +201,7 @@ function initPageInteractions() {
   initMdTabs();
   initScrollReveal();
   initScrollTopButton();
+  initMobileMenu();
 }
 
 document.addEventListener("DOMContentLoaded", initPageInteractions);

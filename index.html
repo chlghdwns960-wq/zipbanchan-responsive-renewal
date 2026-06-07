@@ -41,6 +41,18 @@
           </a>
         </div>
         <div class="header-box header-box--right" aria-label="right 박스">
+          <button
+            class="mobile-menu-toggle"
+            type="button"
+            aria-label="모바일 메뉴 열기"
+            aria-controls="mobileMenuPanel"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
           <div class="utility-box">
             <div class="utility-top">
               <span class="utility-item">로그인</span>
@@ -80,6 +92,20 @@
           </div>
         </div>
       </div>
+      <nav class="mobile-menu-panel" id="mobileMenuPanel" aria-label="모바일 메뉴">
+        <div class="mobile-menu-section">
+          <a href="./index.html">브랜드</a>
+          <a href="#products">반찬보기</a>
+          <a href="#md-picks">MD 추천반찬</a>
+          <a href="./sub1.html">상품 상세</a>
+        </div>
+        <div class="mobile-menu-section mobile-menu-section--utility">
+          <a href="./index.html">로그인</a>
+          <a href="./index.html">회원가입</a>
+          <a href="./index.html">내정보</a>
+          <a href="./index.html">장바구니</a>
+        </div>
+      </nav>
     </header>
     <!-- 배너 슬라이드 -->
     <!-- <div class="banner" aria-label="슬라이드 영역">
@@ -667,7 +693,7 @@
             </div>
           </div>
         </article>
-        <article class="content-box content-box--box5" aria-label="자식 박스 5">
+        <article class="content-box content-box--box5" id="md-picks" aria-label="자식 박스 5">
           <div class="box5-inner">
             <div class="box5-header" aria-label="박스 5 제목 영역">
               <h2 class="box5-title">MD 추천반찬</h2>
