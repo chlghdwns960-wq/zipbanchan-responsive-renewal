@@ -155,6 +155,113 @@ function initScrollTopButton() {
   });
 }
 
+// 검색 아이콘을 눌렀을 때 모바일 검색창을 열고, 검색 결과로 이동하는 함수
+function initSearchInteraction() {
+  const searchButton = document.querySelector(".search-button");
+  const desktopInput = document.querySelector(".search-box input");
+  const mobilePanel = document.querySelector(".mobile-search-panel");
+  const mobileForm = document.querySelector(".mobile-search-form");
+  const mobileInput = document.querySelector(".mobile-search-input");
+  const mobileMessage = document.querySelector(".mobile-search-message");
+
+  if (!searchButton) return;
+
+  const isMobile = () => window.innerWidth <= 768;
+
+  const closeSearch = () => {
+    document.body.classList.remove("is-mobile-search-open");
+    searchButton.setAttribute("aria-expanded", "false");
+  };
+
+  const openSearch = () => {
+    const menuToggle = document.querySelector(".mobile-menu-toggle");
+    document.body.classList.remove("is-mobile-menu-open");
+    if (menuToggle) {
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "모바일 메뉴 열기");
+    }
+    document.body.classList.add("is-mobile-search-open");
+    searchButton.setAttribute("aria-expanded", "true");
+    setTimeout(() => mobileInput && mobileInput.focus(), 120);
+  };
+
+  const findSearchTargets = () =>
+    Array.from(
+      document.querySelectorAll(".food-card, .meal-card, .recommend-item")
+    );
+
+  const clearHighlight = () => {
+    document
+      .querySelectorAll(".search-highlight")
+      .forEach((item) => item.classList.remove("search-highlight"));
+  };
+
+  const runSearch = (keyword) => {
+    const query = keyword.trim().toLowerCase();
+    clearHighlight();
+
+    if (!query) {
+      if (mobileMessage) mobileMessage.textContent = "검색어를 입력해주세요.";
+      return;
+    }
+
+    const target = findSearchTargets().find((item) =>
+      item.innerText.toLowerCase().includes(query)
+    );
+
+    if (!target) {
+      if (mobileMessage) mobileMessage.textContent = `"${keyword}" 검색 결과가 없습니다.`;
+      return;
+    }
+
+    if (mobileMessage) mobileMessage.textContent = `"${keyword}" 결과로 이동합니다.`;
+    closeSearch();
+    target.classList.add("search-highlight");
+    target.scrollIntoView({ behavior: "smooth", block: "center" });
+
+    setTimeout(() => {
+      target.classList.remove("search-highlight");
+    }, 1800);
+  };
+
+  searchButton.addEventListener("click", () => {
+    if (isMobile()) {
+      if (document.body.classList.contains("is-mobile-search-open")) {
+        closeSearch();
+      } else {
+        openSearch();
+      }
+      return;
+    }
+
+    runSearch(desktopInput ? desktopInput.value : "");
+  });
+
+  if (desktopInput) {
+    desktopInput.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        runSearch(desktopInput.value);
+      }
+    });
+  }
+
+  if (mobileForm) {
+    mobileForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      runSearch(mobileInput ? mobileInput.value : "");
+    });
+  }
+
+  window.addEventListener("resize", () => {
+    if (!isMobile()) closeSearch();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeSearch();
+  });
+}
+
 // 모바일 헤더 메뉴를 열고 닫는 함수
 function initMobileMenu() {
   const toggleButton = document.querySelector(".mobile-menu-toggle");
@@ -168,6 +275,9 @@ function initMobileMenu() {
   };
 
   const openMenu = () => {
+    document.body.classList.remove("is-mobile-search-open");
+    const searchButton = document.querySelector(".search-button");
+    if (searchButton) searchButton.setAttribute("aria-expanded", "false");
     document.body.classList.add("is-mobile-menu-open");
     toggleButton.setAttribute("aria-expanded", "true");
     toggleButton.setAttribute("aria-label", "모바일 메뉴 닫기");
@@ -201,6 +311,7 @@ function initPageInteractions() {
   initMdTabs();
   initScrollReveal();
   initScrollTopButton();
+  initSearchInteraction();
   initMobileMenu();
 }
 

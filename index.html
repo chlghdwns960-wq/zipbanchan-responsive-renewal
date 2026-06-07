@@ -26,7 +26,13 @@
               placeholder="반찬을 입력해주세요."
               aria-label="검색어 입력"
             />
-            <button class="search-button" type="button" aria-label="검색">
+            <button
+              class="search-button"
+              type="button"
+              aria-label="검색"
+              aria-controls="mobileSearchPanel"
+              aria-expanded="false"
+            >
               <img src="./images/logo/icon4.png" alt="검색" />
             </button>
           </div>
@@ -91,6 +97,18 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="mobile-search-panel" id="mobileSearchPanel" aria-label="모바일 검색">
+        <form class="mobile-search-form" role="search">
+          <input
+            type="search"
+            class="mobile-search-input"
+            placeholder="찾는 반찬을 입력해주세요."
+            aria-label="모바일 검색어 입력"
+          />
+          <button class="mobile-search-submit" type="submit">검색</button>
+        </form>
+        <p class="mobile-search-message" aria-live="polite"></p>
       </div>
       <nav class="mobile-menu-panel" id="mobileMenuPanel" aria-label="모바일 메뉴">
         <div class="mobile-menu-section">
