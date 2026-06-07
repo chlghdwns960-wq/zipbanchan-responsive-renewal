@@ -1740,11 +1740,11 @@ html {
 
 @media (max-width: 768px) {
   .scroll-top-button {
-    right: 16px;
-    bottom: 20px;
-    width: 46px;
-    height: 46px;
-    font-size: 12px;
+    right: 12px;
+    bottom: max(14px, env(safe-area-inset-bottom));
+    width: 40px;
+    height: 40px;
+    font-size: 11px;
   }
 }
 
@@ -1840,6 +1840,25 @@ body {
   .promo-banner {
     max-width: 100%;
   }
+
+  .meal-btn {
+    top: clamp(124px, 36vw, 176px);
+    width: 34px;
+    height: 34px;
+  }
+
+  .meal-prev {
+    left: 0;
+  }
+
+  .meal-next {
+    right: 0;
+  }
+
+  .meal-btn svg {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1861,8 +1880,13 @@ body {
   .recommend-item-body {
     width: 100%;
   }
+
+  .meal-btn {
+    display: none;
+  }
+
+  .scroll-top-button {
+    display: none;
+  }
 }
-
-
-
 
