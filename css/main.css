@@ -1757,6 +1757,112 @@ html {
   display: grid;
 }
 
+/* =========================================================
+  Final mobile layout guard
+========================================================= */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.site-header,
+.main-content,
+.site-footer,
+.main-visual,
+.main-visual .swiper,
+.main-visual .swiper-wrapper,
+.main-visual .swiper-slide,
+.box1,
+.box2,
+.box3,
+.box4,
+.box5,
+.meal-slider-wrap,
+.mealSwiper {
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .site-header .header-box-group,
+  .box1-inner,
+  .box2-inner,
+  .box3-inner,
+  .box4-inner,
+  .box5-inner {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .main-visual {
+    width: 100%;
+    height: clamp(220px, 56vw, 360px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .main-visual .swiper,
+  .main-visual .swiper-wrapper,
+  .main-visual .swiper-slide {
+    width: 100%;
+    height: 100%;
+  }
+
+  .main-visual .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  .mv-nav {
+    left: 20px;
+  }
+
+  .mv-pagination {
+    right: 20px;
+  }
+
+  .card-grid,
+  .meal-grid,
+  .recommend-row,
+  .recommend-row-side,
+  .promo-banner-grid {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .food-card,
+  .meal-card,
+  .recommend-item,
+  .promo-banner {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-visual {
+    height: clamp(210px, 72vw, 320px);
+  }
+
+  .box1-inner,
+  .box2-inner,
+  .box3-inner,
+  .box4-inner,
+  .box5-inner {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .food-card-body,
+  .meal-card-body,
+  .recommend-item-body {
+    width: 100%;
+  }
+}
+
 
 
 

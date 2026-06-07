@@ -1,4 +1,4 @@
-.main {
+﻿.main {
   width: 1200px;
   margin: 0 auto;
   padding: 40px 0 80px;
@@ -573,4 +573,148 @@
 }
 .site-footer {
   border-top: none;
+}
+
+/* =========================================================
+  Detail page mobile layout guard
+========================================================= */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.main,
+.box,
+.box1-inner,
+.box2-inner,
+.box3-inner,
+.box4-inner,
+.box5-inner,
+.box6-inner {
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .main {
+    width: 100%;
+    padding: 24px 16px 56px;
+  }
+
+  .box1 {
+    padding: 24px 0;
+  }
+
+  .box1-inner {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .box1-image,
+  .box1-info {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+  }
+
+  .box1-image {
+    aspect-ratio: 1 / 1;
+  }
+
+  .product-title {
+    font-size: clamp(26px, 7vw, 34px);
+  }
+
+  .origin-price {
+    margin-bottom: 32px;
+  }
+
+  .action-row {
+    align-items: stretch;
+  }
+
+  .cart-btn {
+    width: 100%;
+  }
+
+  .box2-inner,
+  .box3-inner,
+  .box4-inner,
+  .box5-inner,
+  .box6-inner {
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .box3-inner {
+    gap: 32px;
+    justify-content: space-around;
+  }
+
+  .box3-tab.is-active::after {
+    width: 100%;
+    min-width: 88px;
+  }
+
+  .box4-inner,
+  .box5-inner,
+  .box6-inner {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .box4-title,
+  .box4-section-title,
+  .box5-title,
+  .box6-title {
+    font-size: clamp(24px, 7vw, 30px);
+  }
+
+  .box4-table-row,
+  .box6-review-top {
+    display: block;
+  }
+
+  .box4-table-label {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 6px;
+  }
+
+  .box5-list,
+  .box6-photo-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .box5-card,
+  .box5-image-wrap,
+  .box5-info,
+  .box6-photo,
+  .box6-review {
+    width: 100%;
+  }
+
+  .box5-image-wrap,
+  .box6-photo {
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+}
+
+@media (max-width: 420px) {
+  .box5-list,
+  .box6-photo-list {
+    grid-template-columns: 1fr;
+  }
+
+  .action-row {
+    flex-wrap: wrap;
+  }
+
+  .wish-btn {
+    width: 50px;
+  }
 }
